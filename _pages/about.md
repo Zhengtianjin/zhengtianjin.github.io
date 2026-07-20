@@ -12,7 +12,7 @@ profile:
   image_circular: false
   more_info: >
     <p>Johns Hopkins University</p>
-    <p>Robotics & Perception</p>
+    <p>Robotics & Perception & Control</p>
     <p>Baltimore, MD</p>
 
 selected_papers: true
