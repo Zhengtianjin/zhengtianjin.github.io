@@ -1,0 +1,482 @@
+---
+---
+
+:root {
+  --robotics-accent: #245eea;
+  --robotics-ink: #0c1424;
+  --robotics-muted: #59657a;
+  --robotics-line: #dce3ee;
+  --robotics-panel: #f7f9fc;
+}
+
+html[data-theme="dark"] {
+  --robotics-accent: #78a2ff;
+  --robotics-ink: #f5f7fb;
+  --robotics-muted: #aeb9cc;
+  --robotics-line: #28364e;
+  --robotics-panel: #111a29;
+}
+
+.robotics-home {
+  color: var(--robotics-ink);
+  margin: 0 auto;
+  padding: 2.5rem 0 5rem;
+}
+
+.robotics-hero {
+  align-items: center;
+  display: grid;
+  gap: clamp(2.5rem, 7vw, 6rem);
+  grid-template-columns: minmax(0, 1.35fr) minmax(17rem, 0.65fr);
+  min-height: min(44rem, calc(100vh - 7rem));
+  padding: clamp(2rem, 7vw, 6rem) 0;
+  position: relative;
+}
+
+.robotics-hero::before {
+  background: var(--robotics-accent);
+  content: "";
+  height: 0.2rem;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 4.5rem;
+}
+
+.robotics-eyebrow,
+.robotics-kicker,
+.robotics-card__index,
+.robotics-platform__type,
+.robotics-signal__label {
+  font-family: "Roboto Mono", "SFMono-Regular", Consolas, monospace;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.robotics-eyebrow {
+  align-items: center;
+  color: var(--robotics-muted);
+  display: flex;
+  font-size: 0.73rem;
+  font-weight: 600;
+  gap: 0.65rem;
+  margin-bottom: 1.5rem;
+}
+
+.robotics-status-dot {
+  background: #20a36a;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.28rem rgba(32, 163, 106, 0.14);
+  height: 0.48rem;
+  width: 0.48rem;
+}
+
+.robotics-title {
+  color: var(--robotics-ink);
+  font-size: clamp(3.15rem, 7vw, 6.2rem);
+  font-weight: 750;
+  letter-spacing: -0.065em;
+  line-height: 0.94;
+  margin: 0;
+  max-width: 11ch;
+}
+
+.robotics-subtitle {
+  color: var(--robotics-accent);
+  font-size: clamp(0.88rem, 1.25vw, 1.02rem);
+  font-weight: 600;
+  letter-spacing: 0.045em;
+  line-height: 1.65;
+  margin: 1.65rem 0 0;
+  max-width: 48rem;
+  text-transform: uppercase;
+}
+
+.robotics-lead {
+  color: var(--robotics-muted);
+  font-size: clamp(1.15rem, 2vw, 1.52rem);
+  line-height: 1.55;
+  margin: 1.35rem 0 0;
+  max-width: 34rem;
+}
+
+.robotics-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 2rem;
+}
+
+.robotics-button {
+  align-items: center;
+  border: 1px solid var(--robotics-line);
+  border-radius: 0.45rem;
+  color: var(--robotics-ink) !important;
+  display: inline-flex;
+  font-size: 0.88rem;
+  font-weight: 650;
+  justify-content: center;
+  min-height: 2.85rem;
+  padding: 0.7rem 1.1rem;
+  text-decoration: none !important;
+  transition:
+    border-color 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.robotics-button:hover {
+  border-color: var(--robotics-accent);
+  color: var(--robotics-accent) !important;
+  transform: translateY(-2px);
+}
+
+.robotics-button--primary {
+  background: var(--robotics-accent);
+  border-color: var(--robotics-accent);
+  color: #fff !important;
+}
+
+.robotics-button--primary:hover {
+  color: #fff !important;
+}
+
+.robotics-social {
+  margin-top: 1.5rem;
+}
+
+.robotics-social .contact-icons {
+  justify-content: flex-start;
+}
+
+.robotics-profile {
+  margin: 0;
+  width: 100%;
+}
+
+.robotics-profile__frame {
+  background: var(--robotics-panel);
+  border: 1px solid var(--robotics-line);
+  padding: 0.65rem;
+  position: relative;
+}
+
+.robotics-profile__frame figure,
+.robotics-profile__frame picture {
+  display: block;
+  margin: 0;
+}
+
+.robotics-profile__image {
+  aspect-ratio: 1 / 1;
+  display: block;
+  height: auto;
+  object-fit: cover;
+  width: 100%;
+}
+
+.robotics-corner {
+  height: 2rem;
+  pointer-events: none;
+  position: absolute;
+  width: 2rem;
+}
+
+.robotics-corner--tl {
+  border-left: 2px solid var(--robotics-accent);
+  border-top: 2px solid var(--robotics-accent);
+  left: -0.42rem;
+  top: -0.42rem;
+}
+
+.robotics-corner--br {
+  border-bottom: 2px solid var(--robotics-accent);
+  border-right: 2px solid var(--robotics-accent);
+  bottom: -0.42rem;
+  right: -0.42rem;
+}
+
+.robotics-profile__meta {
+  color: var(--robotics-muted);
+  display: flex;
+  font-family: "Roboto Mono", "SFMono-Regular", Consolas, monospace;
+  font-size: 0.67rem;
+  justify-content: space-between;
+  letter-spacing: 0.06em;
+  padding: 0.9rem 0.15rem 0;
+  text-transform: uppercase;
+}
+
+.robotics-profile__availability {
+  color: #20845b;
+}
+
+.robotics-content {
+  border-top: 1px solid var(--robotics-line);
+}
+
+.robotics-intro {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 0.45fr 1.55fr;
+  padding: clamp(3.5rem, 7vw, 6rem) 0;
+}
+
+.robotics-intro__label {
+  color: var(--robotics-muted);
+  font-family: "Roboto Mono", "SFMono-Regular", Consolas, monospace;
+  font-size: 0.73rem;
+  letter-spacing: 0.12em;
+  padding-top: 0.4rem;
+  text-transform: uppercase;
+}
+
+.robotics-intro__body {
+  font-size: clamp(1.35rem, 2.6vw, 2.1rem);
+  letter-spacing: -0.025em;
+  line-height: 1.42;
+  margin: 0;
+  max-width: 42rem;
+}
+
+.robotics-intro__body strong {
+  color: var(--robotics-accent);
+  font-weight: 650;
+}
+
+.robotics-section {
+  padding: clamp(3.5rem, 7vw, 6rem) 0;
+}
+
+.robotics-section + .robotics-section {
+  border-top: 1px solid var(--robotics-line);
+}
+
+.robotics-section__head {
+  align-items: end;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  margin-bottom: 2.25rem;
+}
+
+.robotics-kicker {
+  color: var(--robotics-accent);
+  font-size: 0.7rem;
+  font-weight: 700;
+  margin: 0 0 0.75rem;
+}
+
+.robotics-section h2 {
+  color: var(--robotics-ink);
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  letter-spacing: -0.045em;
+  margin: 0;
+}
+
+.robotics-section__note {
+  color: var(--robotics-muted);
+  font-size: 0.93rem;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 27rem;
+}
+
+.robotics-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.robotics-card {
+  border: 1px solid var(--robotics-line);
+  min-height: 18rem;
+  padding: 1.5rem;
+  position: relative;
+  transition:
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.robotics-card:hover {
+  border-color: var(--robotics-accent);
+  transform: translateY(-3px);
+}
+
+.robotics-card__index {
+  color: var(--robotics-accent);
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.robotics-card h3 {
+  color: var(--robotics-ink);
+  font-size: 1.28rem;
+  letter-spacing: -0.025em;
+  margin: 3rem 0 0.75rem;
+}
+
+.robotics-card p {
+  color: var(--robotics-muted);
+  font-size: 0.95rem;
+  line-height: 1.68;
+  margin: 0;
+}
+
+.robotics-card__tags {
+  bottom: 1.4rem;
+  color: var(--robotics-muted);
+  font-family: "Roboto Mono", "SFMono-Regular", Consolas, monospace;
+  font-size: 0.64rem;
+  left: 1.5rem;
+  letter-spacing: 0.06em;
+  position: absolute;
+  text-transform: uppercase;
+}
+
+.robotics-signal {
+  align-items: center;
+  background: var(--robotics-panel);
+  border-left: 3px solid var(--robotics-accent);
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 0.4fr 1.6fr;
+  margin-top: 1rem;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.robotics-signal__label {
+  color: var(--robotics-accent);
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.robotics-signal p {
+  color: var(--robotics-ink);
+  font-size: clamp(1.05rem, 2vw, 1.32rem);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.robotics-platforms {
+  border-bottom: 1px solid var(--robotics-line);
+  border-top: 1px solid var(--robotics-line);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.robotics-platform {
+  min-height: 9.5rem;
+  padding: 1.5rem;
+}
+
+.robotics-platform + .robotics-platform {
+  border-left: 1px solid var(--robotics-line);
+}
+
+.robotics-platform__type {
+  color: var(--robotics-muted);
+  font-size: 0.64rem;
+}
+
+.robotics-platform h3 {
+  color: var(--robotics-ink);
+  font-size: 1.22rem;
+  margin: 1.2rem 0 0.35rem;
+}
+
+.robotics-platform p {
+  color: var(--robotics-muted);
+  font-size: 0.87rem;
+  margin: 0;
+}
+
+.robotics-closing {
+  align-items: center;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  padding: clamp(3.5rem, 7vw, 6rem) 0 1rem;
+}
+
+.robotics-closing p {
+  color: var(--robotics-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin: 0;
+  max-width: 36rem;
+}
+
+@media (max-width: 800px) {
+  .robotics-home {
+    padding-top: 1.25rem;
+  }
+
+  .robotics-hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding: 3.5rem 0 4.5rem;
+  }
+
+  .robotics-profile {
+    max-width: 25rem;
+    width: 88%;
+  }
+
+  .robotics-intro,
+  .robotics-signal {
+    grid-template-columns: 1fr;
+  }
+
+  .robotics-grid,
+  .robotics-platforms {
+    grid-template-columns: 1fr;
+  }
+
+  .robotics-card {
+    min-height: 15rem;
+  }
+
+  .robotics-platform + .robotics-platform {
+    border-left: 0;
+    border-top: 1px solid var(--robotics-line);
+  }
+
+  .robotics-section__head,
+  .robotics-closing {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .robotics-title {
+    font-size: clamp(2.8rem, 16vw, 4rem);
+  }
+
+  .robotics-profile {
+    width: 100%;
+  }
+
+  .robotics-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .robotics-button {
+    width: 100%;
+  }
+
+  .robotics-profile__meta {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .robotics-button,
+  .robotics-card {
+    transition: none;
+  }
+}
