@@ -17,7 +17,7 @@ latest_posts:
   enabled: false
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/robotics-home.css' | relative_url | bust_file_cache }}">
+<link rel="stylesheet" href="{{ '/assets/css/robotics-home.css' | relative_url }}">
 
 <main class="robotics-home">
   <section class="robotics-hero" aria-labelledby="home-title">

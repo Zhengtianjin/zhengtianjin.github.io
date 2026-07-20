@@ -34,6 +34,11 @@ jobs:
         run: |
           pip install jupyter nbconvert
 
+      - name: Install image dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes imagemagick
+
       - name: Build
         run: |
           bundle exec jekyll build
