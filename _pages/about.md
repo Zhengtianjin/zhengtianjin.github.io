@@ -4,7 +4,7 @@ title: about
 permalink: /
 
 subtitle: >
-  Master Student in Mechanical Engineering/Robotics · Active Perception · Event Cameras · Embodied AI
+ Mechanical Engineering/Robotics · Active Perception · Event Cameras · Embodied AI
 
 profile:
   align: right
