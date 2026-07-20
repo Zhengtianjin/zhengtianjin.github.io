@@ -37,24 +37,15 @@ My research interests lie at the intersection of **robot perception, active sens
 My current research focuses on:
 
 - **Active Perception and Scene Reconstruction**
-  - Next-best-view planning
-  - Ergodic exploration
-  - 3D Gaussian Splatting for robotics
 
 - **Event-based Vision**
-  - Event camera reconstruction
-  - High-speed perception
-  - Uncertainty-aware sensing
 
 - **Embodied AI**
-  - Vision-Language-Action models
-  - Robot learning
-  - Real-world deployment
 
 
 I work with robotic platforms including **Unitree Go2**, **Franka robotic arms**, and **SO-101**, combining simulation and real-world experiments using tools such as ROS 2, Isaac Lab, and reinforcement learning.
 
 
-Previously, I have worked on computer vision, visual-inertial estimation, and learning-based robotics systems.
+Previously, I have worked on Optimal Control, Path Planning.
 
 I am always interested in collaborating on research related to robotics, perception, and intelligent machines.
