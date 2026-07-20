@@ -148,7 +148,7 @@ html[data-theme="dark"] {
 .robotics-social .contact-icons {
   align-items: center;
   display: flex;
-  gap: 0.3rem;
+  gap: 0.4rem;
   justify-content: flex-start;
 }
 
@@ -156,14 +156,14 @@ html[data-theme="dark"] {
   align-items: center;
   color: var(--robotics-accent) !important;
   display: inline-flex;
-  font-size: 2rem !important;
-  height: 3.25rem;
+  font-size: 2.75rem !important;
+  height: 3.75rem;
   justify-content: center;
   line-height: 1;
   transition:
     color 160ms ease,
     transform 160ms ease;
-  width: 3.25rem;
+  width: 3.75rem;
 }
 
 .robotics-social .contact-icons > a:hover {
@@ -173,13 +173,13 @@ html[data-theme="dark"] {
 
 .robotics-social .contact-icons > a i,
 .robotics-social .contact-icons > a i::before {
-  font-size: 2rem !important;
+  font-size: 2.75rem !important;
 }
 
 .robotics-social .contact-icons > a svg,
 .robotics-social .contact-icons > a img {
-  height: 2rem !important;
-  width: 2rem !important;
+  height: 2.75rem !important;
+  width: 2.75rem !important;
 }
 
 .robotics-profile {
