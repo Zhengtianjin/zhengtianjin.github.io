@@ -65,10 +65,33 @@ latest_posts:
           <span class="robotics-corner robotics-corner--br" aria-hidden="true"></span>
         </div>
 
-        <div class="robotics-profile__meta">
-          <span>JHU · Baltimore, MD</span>
-          <span class="robotics-profile__availability">Researching now</span>
-        </div>
+        {% assign scholar_id = site.data.socials.scholar_userid %}
+{% assign total_citations = 0 %}
+
+{% if site.data.citations and site.data.citations.papers %}
+  {% for paper in site.data.citations.papers %}
+    {% assign paper_id = paper[0] %}
+
+    {% if paper_id contains scholar_id %}
+      {% assign citation_count = paper[1].citations | default: 0 %}
+      {% assign total_citations = total_citations | plus: citation_count %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+<div class="robotics-profile__meta">
+  <span>JHU · Baltimore, MD</span>
+
+  <a
+    class="robotics-profile__availability"
+    href="https://scholar.google.com/citations?user={{ scholar_id }}"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Google Scholar profile with {{ total_citations }} citations"
+  >
+    Citations · {{ total_citations }}
+  </a>
+</div>
       </aside>
     {% endif %}
 
