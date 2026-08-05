@@ -128,6 +128,7 @@ latest_posts:
         </div>
       </aside>
     {% endif %}
+
   </section>
 
   <div class="robotics-content">
@@ -286,5 +287,6 @@ latest_posts:
         </a>
       </div>
     </section>
+
   </div>
 </main>
