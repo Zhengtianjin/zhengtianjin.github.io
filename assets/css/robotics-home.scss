@@ -513,3 +513,195 @@ html[data-theme="dark"] {
     transition: none;
   }
 }
+/* =========================================================
+   Homepage visual polish
+   ========================================================= */
+
+/* 1. Subtle ambient background */
+.robotics-home {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.robotics-home::before {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background:
+    radial-gradient(
+      circle at 18% 30%,
+      rgba(91, 137, 255, 0.08),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 82% 42%,
+      rgba(34, 197, 139, 0.045),
+      transparent 25%
+    );
+}
+
+.robotics-home::after {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  opacity: 0.22;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    );
+  background-size: 48px 48px;
+  mask-image: linear-gradient(to bottom, black, transparent 78%);
+  -webkit-mask-image: linear-gradient(to bottom, black, transparent 78%);
+}
+
+.robotics-home > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* 2. Slightly tighten and balance the hero */
+.robotics-hero {
+  padding-top: clamp(4.5rem, 8vh, 7rem);
+  padding-bottom: clamp(4rem, 8vh, 6.5rem);
+}
+
+.robotics-title {
+  letter-spacing: -0.065em;
+  text-shadow: 0 0 45px rgba(112, 153, 255, 0.055);
+}
+
+.robotics-lead {
+  max-width: 620px;
+}
+
+/* 3. Give the portrait more depth */
+.robotics-profile__frame {
+  background: rgba(255, 255, 255, 0.018);
+  box-shadow:
+    0 28px 80px rgba(0, 0, 0, 0.32),
+    0 0 0 1px rgba(112, 153, 255, 0.08);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.robotics-profile:hover .robotics-profile__frame {
+  transform: translateY(-4px);
+  box-shadow:
+    0 34px 90px rgba(0, 0, 0, 0.38),
+    0 0 0 1px rgba(112, 153, 255, 0.15);
+}
+
+/* 4. Turn citations into a small badge */
+.robotics-profile__meta {
+  gap: 1rem;
+  align-items: center;
+  margin-top: 0.8rem;
+}
+
+.robotics-profile__availability {
+  display: inline-flex;
+  gap: 0.42rem;
+  align-items: center;
+  padding: 0.32rem 0.58rem;
+  color: #25c68a;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  background: rgba(37, 198, 138, 0.06);
+  border: 1px solid rgba(37, 198, 138, 0.18);
+  border-radius: 999px;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.robotics-profile__availability::before {
+  width: 0.36rem;
+  height: 0.36rem;
+  content: "";
+  background: currentColor;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(37, 198, 138, 0.65);
+}
+
+.robotics-profile__availability:hover,
+.robotics-profile__availability:focus-visible {
+  color: #49daa4;
+  text-decoration: none;
+  background: rgba(37, 198, 138, 0.11);
+  border-color: rgba(37, 198, 138, 0.34);
+  transform: translateY(-1px);
+}
+
+/* 5. More tactile buttons */
+.robotics-button {
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.robotics-button:hover {
+  transform: translateY(-2px);
+}
+
+.robotics-button--primary:hover {
+  box-shadow: 0 12px 28px rgba(91, 137, 255, 0.24);
+}
+
+/* 6. Social icon interaction */
+.robotics-social a {
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.robotics-social a:hover {
+  transform: translateY(-2px);
+  opacity: 0.82;
+}
+
+/* Keep mobile layout clean */
+@media (max-width: 899px) {
+  .robotics-hero {
+    padding-top: 3.5rem;
+  }
+
+  .robotics-profile__meta {
+    flex-wrap: wrap;
+  }
+
+  .robotics-profile__availability {
+    padding: 0.3rem 0.52rem;
+  }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .robotics-profile__frame,
+  .robotics-profile__availability,
+  .robotics-button,
+  .robotics-social a {
+    transition: none;
+  }
+
+  .robotics-profile:hover .robotics-profile__frame,
+  .robotics-profile__availability:hover,
+  .robotics-button:hover,
+  .robotics-social a:hover {
+    transform: none;
+  }
+}
