@@ -1,12 +1,16 @@
 metadata:
-  last_updated: '2026-08-04'
+  last_updated: '2026-08-12'
 papers:
+  50anGyIAAAAJ:2osOgNQ5qMEC:
+    citations: 0
+    title: 'TRACE: Ergodic Trajectory Optimization for Active Scene Reconstruction'
+    year: '2026'
   50anGyIAAAAJ:d1gkVwhDpl0C:
     citations: 4
     title: "Neural\u2010Network Potential for Defect Formation Induced by Knock\u2010On Irradiation Damage in 4H\u2010SiC"
     year: '2025'
   50anGyIAAAAJ:u-x6o8ySG0sC:
-    citations: 1
+    citations: 2
     title: Ergodic Trajectory Planning with Dynamic Sensor Footprints
     year: '2025'
   50anGyIAAAAJ:u5HHmVD_uO8C:
