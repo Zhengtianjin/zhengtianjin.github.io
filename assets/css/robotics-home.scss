@@ -2,693 +2,372 @@
 ---
 
 :root {
-  --robotics-accent: #245eea;
-  --robotics-ink: #0c1424;
-  --robotics-muted: #59657a;
-  --robotics-line: #dce3ee;
-  --robotics-panel: #f7f9fc;
+  color-scheme: light;
+  --ink: #242723;
+  --muted: #72756e;
+  --link: #426749;
+  --line: #e3e5df;
+  --paper: #fcfcf9;
 }
-
-html[data-theme="dark"] {
-  --robotics-accent: #78a2ff;
-  --robotics-ink: #f5f7fb;
-  --robotics-muted: #aeb9cc;
-  --robotics-line: #28364e;
-  --robotics-panel: #111a29;
+* {
+  box-sizing: border-box;
 }
-
-.robotics-home {
-  color: var(--robotics-ink);
-  margin: 0 auto;
-  padding: 2.5rem 0 5rem;
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
 }
-
-.robotics-hero {
-  align-items: center;
-  display: grid;
-  gap: clamp(2.5rem, 7vw, 6rem);
-  grid-template-columns: minmax(0, 1.35fr) minmax(17rem, 0.65fr);
-  min-height: min(44rem, calc(100vh - 7rem));
-  padding: clamp(2rem, 7vw, 6rem) 0;
-  position: relative;
-}
-
-.robotics-hero::before {
-  background: var(--robotics-accent);
-  content: "";
-  height: 0.2rem;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 4.5rem;
-}
-
-.robotics-eyebrow,
-.robotics-kicker,
-.robotics-card__index,
-.robotics-platform__type,
-.robotics-signal__label {
-  font-family: "Roboto Mono", "SFMono-Regular", Consolas, monospace;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.robotics-eyebrow {
-  align-items: center;
-  color: var(--robotics-muted);
-  display: flex;
-  font-size: 0.73rem;
-  font-weight: 600;
-  gap: 0.65rem;
-  margin-bottom: 1.5rem;
-}
-
-.robotics-status-dot {
-  background: #20a36a;
-  border-radius: 50%;
-  box-shadow: 0 0 0 0.28rem rgba(32, 163, 106, 0.14);
-  height: 0.48rem;
-  width: 0.48rem;
-}
-
-.robotics-title {
-  color: var(--robotics-ink);
-  font-size: clamp(3.15rem, 7vw, 6.2rem);
-  font-weight: 750;
-  letter-spacing: -0.065em;
-  line-height: 0.94;
+body {
   margin: 0;
-  max-width: 11ch;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
 }
-
-.robotics-subtitle {
-  color: var(--robotics-accent);
-  font-size: clamp(0.88rem, 1.25vw, 1.02rem);
-  font-weight: 600;
-  letter-spacing: 0.045em;
-  line-height: 1.65;
-  margin: 1.65rem 0 0;
-  max-width: 48rem;
-  text-transform: uppercase;
+.academic-home {
+  max-width: 940px;
+  padding: 0 32px;
+  margin: 0 auto;
 }
-
-.robotics-lead {
-  color: var(--robotics-muted);
-  font-size: clamp(1.15rem, 2vw, 1.52rem);
-  line-height: 1.55;
-  margin: 1.35rem 0 0;
-  max-width: 34rem;
+a {
+  color: var(--link);
+  text-decoration: none;
+  text-underline-offset: 3px;
 }
-
-.robotics-actions {
+a:hover {
+  text-decoration: underline;
+}
+a:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 4px;
+}
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 35px 0 43px;
+  font-size: 13px;
+}
+.site-header nav {
+  display: flex;
+  gap: 25px;
+}
+.site-header nav a {
+  color: var(--muted);
+}
+.site-header nav a[aria-current] {
+  color: var(--ink);
+}
+.site-location {
+  color: var(--muted);
+  font-size: 12px;
+}
+.intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 200px;
+  gap: 46px;
+  align-items: start;
+}
+h1 {
+  font-size: 32px;
+  line-height: 1.25;
+  letter-spacing: -0.8px;
+  font-weight: 650;
+  margin: 0 0 9px;
+}
+.preferred-name {
+  font-weight: 400;
+}
+.affiliation {
+  color: var(--muted);
+  font-size: 13px;
+  margin: 0 0 24px !important;
+}
+.intro p {
+  margin: 0 0 13px;
+}
+.intro em {
+  font-style: normal;
+}
+.portrait {
+  margin: 4px 0 0;
+}
+.portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 6 / 7;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.portrait figcaption {
+  color: var(--muted);
+  font-size: 11px;
+  text-align: center;
+  margin-top: 8px;
+}
+.profile-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.8rem;
-  margin-top: 2rem;
+  margin-top: 20px;
+  font-size: 13px;
 }
-
-.robotics-button {
-  align-items: center;
-  border: 1px solid var(--robotics-line);
-  border-radius: 0.45rem;
-  color: var(--robotics-ink) !important;
-  display: inline-flex;
-  font-size: 0.88rem;
-  font-weight: 650;
-  justify-content: center;
-  min-height: 2.85rem;
-  padding: 0.7rem 1.1rem;
-  text-decoration: none !important;
-  transition:
-    border-color 160ms ease,
-    color 160ms ease,
-    transform 160ms ease;
+.profile-links a + a::before,
+.paper-links a + a::before {
+  content: "/";
+  color: #b4b7ad;
+  display: inline-block;
+  margin: 0 10px;
+  font-weight: 400;
 }
-
-.robotics-button:hover {
-  border-color: var(--robotics-accent);
-  color: var(--robotics-accent) !important;
-  transform: translateY(-2px);
+section + section {
+  margin-top: 40px;
 }
-
-.robotics-button--primary {
-  background: var(--robotics-accent);
-  border-color: var(--robotics-accent);
-  color: #fff !important;
+h2 {
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  margin: 0 0 17px;
+  line-height: 1.4;
 }
-
-.robotics-button--primary:hover {
-  color: #fff !important;
+.news {
+  padding-top: 25px;
+  border-top: 1px solid var(--line);
 }
-
-.robotics-social {
-  margin-top: 1.5rem;
-}
-
-.robotics-social .contact-icons {
-  align-items: center;
-  display: flex;
-  gap: 0.4rem;
-  justify-content: flex-start;
-}
-
-.robotics-social .contact-icons > a {
-  align-items: center;
-  color: var(--robotics-accent) !important;
-  display: inline-flex;
-  font-size: 2.75rem !important;
-  height: 3.75rem;
-  justify-content: center;
-  line-height: 1;
-  transition:
-    color 160ms ease,
-    transform 160ms ease;
-  width: 3.75rem;
-}
-
-.robotics-social .contact-icons > a:hover {
-  color: var(--robotics-ink) !important;
-  transform: translateY(-2px);
-}
-
-.robotics-social .contact-icons > a i,
-.robotics-social .contact-icons > a i::before {
-  font-size: 2.75rem !important;
-}
-
-.robotics-social .contact-icons > a svg,
-.robotics-social .contact-icons > a img {
-  height: 2.75rem !important;
-  width: 2.75rem !important;
-}
-
-.robotics-profile {
+.news-list {
+  list-style: none;
   margin: 0;
-  width: 100%;
+  padding: 0;
+  font-size: 14px;
 }
-
-.robotics-profile__frame {
-  background: var(--robotics-panel);
-  border: 1px solid var(--robotics-line);
-  padding: 0.65rem;
-  position: relative;
-}
-
-.robotics-profile__frame figure,
-.robotics-profile__frame picture {
-  display: block;
-  margin: 0;
-}
-
-.robotics-profile__image {
-  aspect-ratio: 1 / 1;
-  display: block;
-  height: auto;
-  object-fit: cover;
-  width: 100%;
-}
-
-.robotics-corner {
-  height: 2rem;
-  pointer-events: none;
-  position: absolute;
-  width: 2rem;
-}
-
-.robotics-corner--tl {
-  border-left: 2px solid var(--robotics-accent);
-  border-top: 2px solid var(--robotics-accent);
-  left: -0.42rem;
-  top: -0.42rem;
-}
-
-.robotics-corner--br {
-  border-bottom: 2px solid var(--robotics-accent);
-  border-right: 2px solid var(--robotics-accent);
-  bottom: -0.42rem;
-  right: -0.42rem;
-}
-
-.robotics-profile__meta {
-  color: var(--robotics-muted);
-  display: flex;
-  font-family: "Roboto Mono", "SFMono-Regular", Consolas, monospace;
-  font-size: 0.67rem;
-  justify-content: space-between;
-  letter-spacing: 0.06em;
-  padding: 0.9rem 0.15rem 0;
-  text-transform: uppercase;
-}
-
-.robotics-profile__availability {
-  color: #20845b;
-}
-
-.robotics-content {
-  border-top: 1px solid var(--robotics-line);
-}
-
-.robotics-intro {
+.news-list li {
   display: grid;
-  gap: 2rem;
-  grid-template-columns: 0.45fr 1.55fr;
-  padding: clamp(3.5rem, 7vw, 6rem) 0;
+  grid-template-columns: 83px minmax(0, 1fr);
+  gap: 14px;
+  margin: 0 0 12px;
 }
-
-.robotics-intro__label {
-  color: var(--robotics-muted);
-  font-family: "Roboto Mono", "SFMono-Regular", Consolas, monospace;
-  font-size: 0.73rem;
-  letter-spacing: 0.12em;
-  padding-top: 0.4rem;
-  text-transform: uppercase;
+.news-list time {
+  color: #81705e;
+  font-size: 12px;
+  padding-top: 2px;
 }
-
-.robotics-intro__body {
-  font-size: clamp(1.35rem, 2.6vw, 2.1rem);
-  letter-spacing: -0.025em;
-  line-height: 1.42;
-  margin: 0;
-  max-width: 42rem;
-}
-
-.robotics-intro__body strong {
-  color: var(--robotics-accent);
-  font-weight: 650;
-}
-
-.robotics-section {
-  padding: clamp(3.5rem, 7vw, 6rem) 0;
-}
-
-.robotics-section + .robotics-section {
-  border-top: 1px solid var(--robotics-line);
-}
-
-.robotics-section__head {
-  align-items: end;
-  display: flex;
-  gap: 2rem;
-  justify-content: space-between;
-  margin-bottom: 2.25rem;
-}
-
-.robotics-kicker {
-  color: var(--robotics-accent);
-  font-size: 0.7rem;
-  font-weight: 700;
-  margin: 0 0 0.75rem;
-}
-
-.robotics-section h2 {
-  color: var(--robotics-ink);
-  font-size: clamp(1.9rem, 4vw, 3rem);
-  letter-spacing: -0.045em;
+.news-list p {
+  display: inline;
   margin: 0;
 }
-
-.robotics-section__note {
-  color: var(--robotics-muted);
-  font-size: 0.93rem;
-  line-height: 1.6;
-  margin: 0;
-  max-width: 27rem;
-}
-
-.robotics-grid {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.robotics-card {
-  border: 1px solid var(--robotics-line);
-  min-height: 18rem;
-  padding: 1.5rem;
-  position: relative;
-  transition:
-    border-color 180ms ease,
-    transform 180ms ease;
-}
-
-.robotics-card:hover {
-  border-color: var(--robotics-accent);
-  transform: translateY(-3px);
-}
-
-.robotics-card__index {
-  color: var(--robotics-accent);
-  font-size: 0.7rem;
-  font-weight: 700;
-}
-
-.robotics-card h3 {
-  color: var(--robotics-ink);
-  font-size: 1.28rem;
-  letter-spacing: -0.025em;
-  margin: 3rem 0 0.75rem;
-}
-
-.robotics-card p {
-  color: var(--robotics-muted);
-  font-size: 0.95rem;
-  line-height: 1.68;
-  margin: 0;
-}
-
-.robotics-card__tags {
-  bottom: 1.4rem;
-  color: var(--robotics-muted);
-  font-family: "Roboto Mono", "SFMono-Regular", Consolas, monospace;
-  font-size: 0.64rem;
-  left: 1.5rem;
-  letter-spacing: 0.06em;
-  position: absolute;
-  text-transform: uppercase;
-}
-
-.robotics-signal {
-  align-items: center;
-  background: var(--robotics-panel);
-  border-left: 3px solid var(--robotics-accent);
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: 0.4fr 1.6fr;
-  margin-top: 1rem;
-  padding: clamp(1.5rem, 4vw, 2.5rem);
-}
-
-.robotics-signal__label {
-  color: var(--robotics-accent);
-  font-size: 0.68rem;
-  font-weight: 700;
-}
-
-.robotics-signal p {
-  color: var(--robotics-ink);
-  font-size: clamp(1.05rem, 2vw, 1.32rem);
-  line-height: 1.55;
-  margin: 0;
-}
-
-.robotics-platforms {
-  border-bottom: 1px solid var(--robotics-line);
-  border-top: 1px solid var(--robotics-line);
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.robotics-platform {
-  min-height: 9.5rem;
-  padding: 1.5rem;
-}
-
-.robotics-platform + .robotics-platform {
-  border-left: 1px solid var(--robotics-line);
-}
-
-.robotics-platform__type {
-  color: var(--robotics-muted);
-  font-size: 0.64rem;
-}
-
-.robotics-platform h3 {
-  color: var(--robotics-ink);
-  font-size: 1.22rem;
-  margin: 1.2rem 0 0.35rem;
-}
-
-.robotics-platform p {
-  color: var(--robotics-muted);
-  font-size: 0.87rem;
-  margin: 0;
-}
-
-.robotics-closing {
-  align-items: center;
-  display: flex;
-  gap: 2rem;
-  justify-content: space-between;
-  padding: clamp(3.5rem, 7vw, 6rem) 0 1rem;
-}
-
-.robotics-closing p {
-  color: var(--robotics-muted);
-  font-size: 1.05rem;
-  line-height: 1.7;
-  margin: 0;
-  max-width: 36rem;
-}
-
-@media (max-width: 800px) {
-  .robotics-home {
-    padding-top: 1.25rem;
-  }
-
-  .robotics-hero {
-    grid-template-columns: 1fr;
-    min-height: auto;
-    padding: 3.5rem 0 4.5rem;
-  }
-
-  .robotics-profile {
-    max-width: 25rem;
-    width: 88%;
-  }
-
-  .robotics-intro,
-  .robotics-signal {
-    grid-template-columns: 1fr;
-  }
-
-  .robotics-grid,
-  .robotics-platforms {
-    grid-template-columns: 1fr;
-  }
-
-  .robotics-card {
-    min-height: 15rem;
-  }
-
-  .robotics-platform + .robotics-platform {
-    border-left: 0;
-    border-top: 1px solid var(--robotics-line);
-  }
-
-  .robotics-section__head,
-  .robotics-closing {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 480px) {
-  .robotics-title {
-    font-size: clamp(2.8rem, 16vw, 4rem);
-  }
-
-  .robotics-profile {
-    width: 100%;
-  }
-
-  .robotics-actions {
-    align-items: stretch;
-    flex-direction: column;
-  }
-
-  .robotics-button {
-    width: 100%;
-  }
-
-  .robotics-profile__meta {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 0.35rem;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .robotics-button,
-  .robotics-card {
-    transition: none;
-  }
-}
-/* =========================================================
-   Homepage visual polish
-   ========================================================= */
-
-/* 1. Subtle ambient background */
-.robotics-home {
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
-}
-
-.robotics-home::before {
-  position: absolute;
-  z-index: 0;
-  inset: 0;
-  content: "";
-  pointer-events: none;
-  background:
-    radial-gradient(circle at 18% 30%, rgba(91, 137, 255, 0.08), transparent 30%),
-    radial-gradient(circle at 82% 42%, rgba(34, 197, 139, 0.045), transparent 25%);
-}
-
-.robotics-home::after {
-  position: absolute;
-  z-index: 0;
-  inset: 0;
-  content: "";
-  pointer-events: none;
-  opacity: 0.22;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
-  background-size: 48px 48px;
-  mask-image: linear-gradient(to bottom, black, transparent 78%);
-  -webkit-mask-image: linear-gradient(to bottom, black, transparent 78%);
-}
-
-.robotics-home > * {
-  position: relative;
-  z-index: 1;
-}
-
-/* 2. Slightly tighten and balance the hero */
-.robotics-hero {
-  padding-top: clamp(4.5rem, 8vh, 7rem);
-  padding-bottom: clamp(4rem, 8vh, 6.5rem);
-}
-
-.robotics-title {
-  letter-spacing: -0.065em;
-  text-shadow: 0 0 45px rgba(112, 153, 255, 0.055);
-}
-
-.robotics-lead {
-  max-width: 620px;
-}
-
-/* 3. Give the portrait more depth */
-.robotics-profile__frame {
-  background: rgba(255, 255, 255, 0.018);
-  box-shadow:
-    0 28px 80px rgba(0, 0, 0, 0.32),
-    0 0 0 1px rgba(112, 153, 255, 0.08);
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.robotics-profile:hover .robotics-profile__frame {
-  transform: translateY(-4px);
-  box-shadow:
-    0 34px 90px rgba(0, 0, 0, 0.38),
-    0 0 0 1px rgba(112, 153, 255, 0.15);
-}
-
-/* 4. Turn citations into a small badge */
-.robotics-profile__meta {
-  gap: 1rem;
-  align-items: center;
-  margin-top: 0.8rem;
-}
-
-.robotics-profile__availability {
-  display: inline-flex;
-  gap: 0.42rem;
-  align-items: center;
-  padding: 0.32rem 0.58rem;
-  color: #25c68a;
-  line-height: 1;
-  text-decoration: none;
+.news-list a {
+  margin-left: 4px;
   white-space: nowrap;
-  background: rgba(37, 198, 138, 0.06);
-  border: 1px solid rgba(37, 198, 138, 0.18);
-  border-radius: 999px;
-  transition:
-    color 0.2s ease,
-    background-color 0.2s ease,
-    border-color 0.2s ease,
-    transform 0.2s ease;
 }
-
-.robotics-profile__availability::before {
-  width: 0.36rem;
-  height: 0.36rem;
-  content: "";
-  background: currentColor;
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(37, 198, 138, 0.65);
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
 }
-
-.robotics-profile__availability:hover,
-.robotics-profile__availability:focus-visible {
-  color: #49daa4;
-  text-decoration: none;
-  background: rgba(37, 198, 138, 0.11);
-  border-color: rgba(37, 198, 138, 0.34);
-  transform: translateY(-1px);
+.section-heading h2 {
+  margin-bottom: 6px;
 }
-
-/* 5. More tactile buttons */
-.robotics-button {
-  transition:
-    transform 0.2s ease,
-    border-color 0.2s ease,
-    background-color 0.2s ease,
-    box-shadow 0.2s ease;
+.bibliography-link {
+  font-size: 12px;
 }
-
-.robotics-button:hover {
-  transform: translateY(-2px);
+.publication-note {
+  color: var(--muted);
+  font-size: 11px;
+  margin: 0 0 26px;
 }
-
-.robotics-button--primary:hover {
-  box-shadow: 0 12px 28px rgba(91, 137, 255, 0.24);
+.publication-note span {
+  white-space: nowrap;
 }
-
-/* 6. Social icon interaction */
-.robotics-social a {
-  transition:
-    color 0.2s ease,
-    transform 0.2s ease,
-    opacity 0.2s ease;
+.paper {
+  padding: 23px 0;
+  border-top: 1px solid var(--line);
 }
-
-.robotics-social a:hover {
-  transform: translateY(-2px);
-  opacity: 0.82;
+.paper:first-child {
+  padding-top: 0;
+  border-top: 0;
 }
-
-/* Keep mobile layout clean */
-@media (max-width: 899px) {
-  .robotics-hero {
-    padding-top: 3.5rem;
+.paper-with-video {
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr);
+  column-gap: 25px;
+}
+.paper-media {
+  padding-top: 3px;
+  min-width: 0;
+}
+.paper-media video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+}
+.media-caption {
+  display: block;
+  font-size: 10px;
+  color: var(--muted);
+  margin: 7px 0 0;
+}
+.paper h3 {
+  font-size: 15px;
+  font-weight: 650;
+  letter-spacing: 0;
+  line-height: 1.5;
+  margin: 0 0 6px;
+}
+.paper-authors {
+  font-size: 13px;
+  line-height: 1.6;
+}
+.paper-authors p {
+  margin: 0;
+}
+.paper-authors strong {
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: #c4c8bb;
+  text-underline-offset: 3px;
+}
+.paper-venue {
+  font-style: italic;
+  font-size: 13px;
+  margin: 4px 0;
+}
+.paper-links {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 12px;
+}
+.paper-links a + a::before {
+  margin: 0 7px;
+}
+.paper-links .citation-link {
+  color: var(--muted);
+}
+.paper-description {
+  color: #63675f;
+  font-size: 12px;
+  line-height: 1.7;
+  margin: 9px 0 0;
+}
+.paper-reader {
+  grid-column: 1 / -1;
+  margin-top: 10px;
+}
+summary {
+  cursor: pointer;
+  color: var(--link);
+  font-size: 12px;
+  width: fit-content;
+}
+.paper-pdf {
+  margin-top: 12px;
+  padding: 12px;
+  background: #f2f3ee;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+}
+.paper-pdf p {
+  font-size: 12px;
+  margin: 0 0 10px;
+}
+.paper-pdf iframe {
+  display: block;
+  border: 0;
+  width: 100%;
+  height: 75vh;
+  min-height: 400px;
+  background: white;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 0 35px;
+  margin-top: 35px;
+  border-top: 1px solid var(--line);
+  font-size: 11px;
+  color: var(--muted);
+}
+@media (max-width: 650px) {
+  .academic-home {
+    padding: 0 22px;
   }
-
-  .robotics-profile__meta {
-    flex-wrap: wrap;
+  .site-header {
+    padding: 23px 0 30px;
   }
-
-  .robotics-profile__availability {
-    padding: 0.3rem 0.52rem;
+  .site-location {
+    display: none;
+  }
+  .intro {
+    grid-template-columns: minmax(0, 1fr) 110px;
+    gap: 20px;
+  }
+  h1 {
+    font-size: 27px;
+  }
+  .intro-copy {
+    display: contents;
+  }
+  .intro-copy h1 {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: end;
+    margin: 0;
+  }
+  .intro-copy .affiliation {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: start;
+    margin: 0 !important;
+    font-size: 12px;
+  }
+  .portrait {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    margin: 0;
+  }
+  .portrait figcaption {
+    display: none;
+  }
+  .intro-copy > p:not(.affiliation),
+  .profile-links {
+    grid-column: 1 / -1;
+    margin: 0;
+  }
+  .intro {
+    row-gap: 14px;
+  }
+  .profile-links {
+    margin-top: 2px;
+  }
+  .paper-with-video {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 15px;
+  }
+  .paper-media {
+    max-width: 420px;
+  }
+  .paper-reader {
+    margin-top: 0;
+  }
+  .news-list li {
+    grid-template-columns: 70px minmax(0, 1fr);
+    gap: 10px;
+  }
+  .news-list a {
+    white-space: normal;
+  }
+  section + section {
+    margin-top: 32px;
   }
 }
-
-/* Respect reduced-motion preferences */
 @media (prefers-reduced-motion: reduce) {
-  .robotics-profile__frame,
-  .robotics-profile__availability,
-  .robotics-button,
-  .robotics-social a {
-    transition: none;
-  }
-
-  .robotics-profile:hover .robotics-profile__frame,
-  .robotics-profile__availability:hover,
-  .robotics-button:hover,
-  .robotics-social a:hover {
-    transform: none;
+  html {
+    scroll-behavior: auto;
   }
 }

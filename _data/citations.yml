@@ -1,19 +1,24 @@
 metadata:
-  last_updated: '2026-09-02'
+  last_updated: '2026-09-06'
+author:
+  scholar_id: 50anGyIAAAAJ
+  total_citations: 10
 papers:
-  50anGyIAAAAJ:2osOgNQ5qMEC:
-    citations: 0
-    title: 'TRACE: Ergodic Trajectory Optimization for Active Scene Reconstruction'
-    year: '2026'
   50anGyIAAAAJ:d1gkVwhDpl0C:
-    citations: 4
-    title: "Neural\u2010Network Potential for Defect Formation Induced by Knock\u2010On Irradiation Damage in 4H\u2010SiC"
+    title: Neural‐Network Potential for Defect Formation Induced by Knock‐On Irradiation
+      Damage in 4H‐SiC
     year: '2025'
+    citations: 4
   50anGyIAAAAJ:u-x6o8ySG0sC:
-    citations: 3
     title: Ergodic Trajectory Planning with Dynamic Sensor Footprints
     year: '2025'
-  50anGyIAAAAJ:u5HHmVD_uO8C:
     citations: 3
-    title: "Comparative study of doping properties and the effect on sliding barriers in \u03B3-InSe"
+  50anGyIAAAAJ:u5HHmVD_uO8C:
+    title: Comparative study of doping properties and the effect on sliding barriers
+      in γ-InSe
     year: '2025'
+    citations: 3
+  50anGyIAAAAJ:2osOgNQ5qMEC:
+    title: 'TRACE: Ergodic Trajectory Optimization for Active Scene Reconstruction'
+    year: '2026'
+    citations: 0

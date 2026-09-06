@@ -1,0 +1,39 @@
+- id: trace
+  title: "TRACE: Ergodic Trajectory Optimization for Active Scene Reconstruction"
+  authors: '**Ziyue Zheng**\*, Linli Shi\*, Bingkun He, Wen Jiang, Ziyun Wang'
+  note: "* Equal contribution"
+  venue: arXiv · 2026
+  year: 2026
+  paper: https://arxiv.org/abs/2608.02304
+  pdf: /assets/pdf/trace.pdf
+  code: https://github.com/spikelab-jhu/trace-active-reconstruction
+  video: /assets/video/trace.mp4
+  poster: /assets/img/trace-video-poster.jpg
+  description: Time-varying, footprint-aware ergodic planning for active Gaussian scene reconstruction, connecting informative
+    camera trajectories with real robot deployment.
+  scholar_id: 50anGyIAAAAJ:2osOgNQ5qMEC
+- id: ergodic
+  title: Ergodic Trajectory Planning with Dynamic Sensor Footprints
+  authors: "**Ziyue Zheng**, Yongce Liu, Hesheng Wang, Zhongqiang Ren"
+  venue: arXiv · 2025
+  year: 2025
+  paper: https://arxiv.org/abs/2512.08661
+  pdf: /assets/pdf/ergodic.pdf
+  scholar_id: 50anGyIAAAAJ:u-x6o8ySG0sC
+  description: Ergodic trajectory planning with dynamic sensor footprints.
+- id: sic
+  title: Neural-Network Potential for Defect Formation Induced by Knock-On Irradiation Damage in 4H-SiC
+  authors: Wei Liu, Pengsheng Guo, **Ziyue Zheng**, Shiyou Chen, Yu-Ning Wu
+  venue: Advanced Electronic Materials · 2025
+  year: 2025
+  paper: https://doi.org/10.1002/aelm.202400911
+  scholar_id: 50anGyIAAAAJ:d1gkVwhDpl0C
+  description: Neural-network potentials for modeling irradiation-induced defects in silicon carbide.
+- id: inse
+  title: Comparative study of doping properties and the effect on sliding barriers in γ-InSe
+  authors: Haoyang Li, Chengfeng Pan, **Ziyue Zheng**, Fengrui Sui, Beituo Liu, Ting Jia, Ruijuan Qi, Fangyu Yue, Yu-Ning
+    Wu
+  venue: Journal of Applied Physics · 2025
+  year: 2025
+  scholar_id: 50anGyIAAAAJ:u5HHmVD_uO8C
+  paper: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=50anGyIAAAAJ&citation_for_view=50anGyIAAAAJ:u5HHmVD_uO8C

@@ -1,0 +1,5 @@
+# Add your own announcements here. Newest dates appear first on the homepage.
+- date: "2026-08-06"
+  text: "We released **TRACE**, our work on trajectory-level ergodic planning for active scene reconstruction."
+  url: https://arxiv.org/abs/2608.02304
+  label: Read the paper
