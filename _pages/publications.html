@@ -1,0 +1,48 @@
+---
+layout: null
+permalink: /publications/
+title: publications
+nav: true
+nav_order: 2
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Ziyue Darcy Zheng — robotics graduate student at Johns Hopkins University. Active perception, event-based vision, and robot learning."
+    />
+    <title>Publications · Ziyue Darcy Zheng</title>
+    <link rel="canonical" href="{{ '/publications/' | absolute_url }}" />
+    <link rel="stylesheet" href="{{ '/assets/css/robotics-home.css' | relative_url }}" />
+  </head>
+  <body>
+    <div class="academic-home">
+      <header class="site-header">
+        <nav aria-label="Main navigation">
+          <a href="{{ '/' | relative_url }}#about">About</a>
+          <a href="{{ '/' | relative_url }}#news">News</a>
+          <a href="{{ '/publications/' | relative_url }}" aria-current="page">Publications</a>
+        </nav>
+        <span class="site-location">Johns Hopkins University</span>
+      </header>
+      <main class="full-bibliography">
+        <h1>Publications</h1>
+        <p class="bibliography-intro">
+          The complete bibliography of Ziyue Darcy Zheng. <a href="{{ '/' | relative_url }}#publications">Research videos and paper previews →</a>
+        </p>
+        {% bibliography --template '
+        <div class="bibliography-reference">{{reference}}</div>
+        <details class="bibtex-reader">
+          <summary>BibTeX</summary>
+          <pre><code>{{entry.bibtex | escape}}</code></pre>
+        </details>
+        ' %}
+      </main>
+      <footer><span>© {{ site.time | date: '%Y' }} Ziyue Darcy Zheng</span><a href="{{ '/' | relative_url }}">Back to home ↑</a></footer>
+    </div>
+  </body>
+</html>

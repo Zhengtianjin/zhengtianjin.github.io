@@ -371,3 +371,46 @@ footer {
     scroll-behavior: auto;
   }
 }
+
+.full-bibliography h1 {
+  margin-bottom: 12px;
+}
+.bibliography-intro {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0 0 32px;
+}
+h2.bibliography {
+  margin: 30px 0 15px;
+  font-size: 19px;
+}
+ol.bibliography {
+  padding: 0;
+  list-style: none;
+}
+ol.bibliography li {
+  border-bottom: 1px solid var(--line);
+  padding: 0 0 22px;
+  margin-bottom: 22px;
+}
+.bibliography-reference {
+  font-size: 14px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+.bibliography-actions {
+  font-size: 12px;
+  margin-top: 9px;
+}
+.bibtex-reader {
+  margin-top: 8px;
+}
+.bibtex-reader pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 12px;
+  line-height: 1.65;
+  padding: 16px;
+  background: #f2f3ee;
+  border: 1px solid var(--line);
+}

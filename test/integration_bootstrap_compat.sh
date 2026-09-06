@@ -14,8 +14,8 @@ override_file="${tmp_dir}/compat-override.yml"
 bundle exec jekyll build -d "${site_no_compat}" >/dev/null
 
 # The homepage has an independent layout. Exercise compatibility on the
-# publications page, which uses the installed al-folio page layout.
-index_no_compat="${site_no_compat}/publications/index.html"
+# blog post, which uses the installed al-folio page layout.
+index_no_compat="${site_no_compat}/blog/2015/disqus-comments/index.html"
 grep -q '/assets/css/tailwind.css' "${index_no_compat}"
 if grep -q '/assets/css/bootstrap-compat.css' "${index_no_compat}"; then
   echo "unexpected bootstrap compatibility stylesheet in default build" >&2
@@ -35,7 +35,7 @@ YAML
 
 bundle exec jekyll build --config "_config.yml,${override_file}" -d "${site_with_compat}" >/dev/null
 
-index_with_compat="${site_with_compat}/publications/index.html"
+index_with_compat="${site_with_compat}/blog/2015/disqus-comments/index.html"
 grep -q '/assets/css/bootstrap-compat.css' "${index_with_compat}"
 grep -q '/assets/js/bootstrap-compat.js' "${index_with_compat}"
 [ -f "${site_with_compat}/assets/css/bootstrap-compat.css" ]
