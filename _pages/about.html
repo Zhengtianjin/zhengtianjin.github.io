@@ -115,7 +115,7 @@ permalink: /
                   <source src="{{ paper.video | relative_url }}" type="video/mp4" />
                   <a href="{{ paper.video | relative_url }}">Watch the research video</a>.
                 </video>
-                <span class="media-caption">TRACE · Research demonstration</span>
+                <span class="media-caption">{{ paper.media_caption | default: paper.title }}</span>
               </div>
               {% endif %}
               <div class="paper-copy">

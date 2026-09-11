@@ -9,6 +9,7 @@
   code: https://github.com/spikelab-jhu/trace-active-reconstruction
   video: /assets/video/trace.mp4
   poster: /assets/img/trace-video-poster.jpg
+  media_caption: TRACE · Research demonstration
   description: Time-varying, footprint-aware ergodic planning for active Gaussian scene reconstruction, connecting informative
     camera trajectories with real robot deployment.
   scholar_id: 50anGyIAAAAJ:2osOgNQ5qMEC
@@ -19,6 +20,9 @@
   year: 2026
   paper: https://ieeexplore.ieee.org/document/11680559
   pdf: /assets/pdf/ergodic.pdf
+  video: /assets/video/ergodic-sensor-footprint.mp4
+  poster: /assets/img/ergodic-sensor-footprint-poster.jpg
+  media_caption: ETO-DF · Dynamic sensor footprint demo
   scholar_id: 50anGyIAAAAJ:u-x6o8ySG0sC
   description: Trajectory planning for information gathering with dynamic, resolution-varying sensor footprints, validated on a multi-drone system.
 - id: sic
