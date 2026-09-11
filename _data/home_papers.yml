@@ -1,3 +1,14 @@
+- id: ergodic
+  title: Ergodic Trajectory Planning With Dynamic Sensor Footprints
+  authors: "**Ziyue Zheng**, Yongce Liu, Hesheng Wang, Zhongqiang Ren"
+  venue: IEEE Transactions on Robotics (T-RO) · Early Access · 2026
+  year: 2026
+  paper: https://ieeexplore.ieee.org/document/11680559
+  video: /assets/video/ergodic-sensor-footprint.mp4
+  poster: /assets/img/ergodic-sensor-footprint-poster.jpg
+  media_caption: ETO-DF · Dynamic sensor footprint demo
+  scholar_id: 50anGyIAAAAJ:u-x6o8ySG0sC
+  description: Trajectory planning for information gathering with dynamic, resolution-varying sensor footprints, validated on a multi-drone system.
 - id: trace
   title: "TRACE: Ergodic Trajectory Optimization for Active Scene Reconstruction"
   authors: '**Ziyue Zheng**\*, Linli Shi\*, Bingkun He, Wen Jiang, Ziyun Wang'
@@ -13,17 +24,6 @@
   description: Time-varying, footprint-aware ergodic planning for active Gaussian scene reconstruction, connecting informative
     camera trajectories with real robot deployment.
   scholar_id: 50anGyIAAAAJ:2osOgNQ5qMEC
-- id: ergodic
-  title: Ergodic Trajectory Planning With Dynamic Sensor Footprints
-  authors: "**Ziyue Zheng**, Yongce Liu, Hesheng Wang, Zhongqiang Ren"
-  venue: IEEE Transactions on Robotics (T-RO) · Early Access · 2026
-  year: 2026
-  paper: https://ieeexplore.ieee.org/document/11680559
-  video: /assets/video/ergodic-sensor-footprint.mp4
-  poster: /assets/img/ergodic-sensor-footprint-poster.jpg
-  media_caption: ETO-DF · Dynamic sensor footprint demo
-  scholar_id: 50anGyIAAAAJ:u-x6o8ySG0sC
-  description: Trajectory planning for information gathering with dynamic, resolution-varying sensor footprints, validated on a multi-drone system.
 - id: sic
   title: Neural-Network Potential for Defect Formation Induced by Knock-On Irradiation Damage in 4H-SiC
   authors: Wei Liu, Pengsheng Guo, **Ziyue Zheng**, Shiyou Chen, Yu-Ning Wu
