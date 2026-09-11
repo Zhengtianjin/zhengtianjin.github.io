@@ -13,14 +13,14 @@
     camera trajectories with real robot deployment.
   scholar_id: 50anGyIAAAAJ:2osOgNQ5qMEC
 - id: ergodic
-  title: Ergodic Trajectory Planning with Dynamic Sensor Footprints
+  title: Ergodic Trajectory Planning With Dynamic Sensor Footprints
   authors: "**Ziyue Zheng**, Yongce Liu, Hesheng Wang, Zhongqiang Ren"
-  venue: arXiv · 2025
-  year: 2025
-  paper: https://arxiv.org/abs/2512.08661
+  venue: IEEE Transactions on Robotics (T-RO) · Early Access · 2026
+  year: 2026
+  paper: https://ieeexplore.ieee.org/document/11680559
   pdf: /assets/pdf/ergodic.pdf
   scholar_id: 50anGyIAAAAJ:u-x6o8ySG0sC
-  description: Ergodic trajectory planning with dynamic sensor footprints.
+  description: Trajectory planning for information gathering with dynamic, resolution-varying sensor footprints, validated on a multi-drone system.
 - id: sic
   title: Neural-Network Potential for Defect Formation Induced by Knock-On Irradiation Damage in 4H-SiC
   authors: Wei Liu, Pengsheng Guo, **Ziyue Zheng**, Shiyou Chen, Yu-Ning Wu
