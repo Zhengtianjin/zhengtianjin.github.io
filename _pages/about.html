@@ -29,9 +29,28 @@ permalink: /
       </header>
       <main>
         <section class="intro" id="about" aria-labelledby="name">
-          <div class="intro-copy">
+          <div class="intro-profile">
+            <figure class="portrait">
+              <img
+                src="{{ '/assets/img/profile-polaroid.jpg' | relative_url }}"
+                width="1400"
+                height="1024"
+                alt="Ziyue Darcy Zheng"
+                fetchpriority="high"
+              />
+              <figcaption>Baltimore, Maryland</figcaption>
+            </figure>
             <h1 id="name">Ziyue <span class="preferred-name">(Darcy)</span> Zheng</h1>
-            <p class="affiliation">Master's student · Johns Hopkins University</p>
+            <p class="affiliation">Master's student<br />Johns Hopkins University</p>
+            <div class="profile-links" aria-label="Profile links">
+              <a href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}">Google Scholar ↗</a>
+              <a href="https://github.com/{{ site.data.socials.github_username }}">GitHub ↗</a>
+              <a href="https://www.linkedin.com/in/{{ site.data.socials.linkedin_username }}/">LinkedIn ↗</a>
+              <a href="https://x.com/{{ site.data.socials.x_username }}">X ↗</a>
+            </div>
+          </div>
+          <div class="intro-copy">
+            <p class="intro-kicker">Robotics · Perception · Learning</p>
             <p>
               Hi! I'm a <strong>Master's student in Mechanical Engineering</strong> at
               <a href="https://www.jhu.edu/"><strong>Johns Hopkins University</strong></a
@@ -41,6 +60,7 @@ permalink: /
               Before joining Johns Hopkins, I received my <strong>B.S. in Optoelectronic Information Science and Engineering</strong> from
               <strong>East China Normal University</strong> in 2024.
             </p>
+            <h2 class="research-heading">Research interests</h2>
             <p>
               My research focuses on <strong>active perception</strong> and <strong>robot learning</strong>, with an emphasis on
               <strong>decision-making under partial observability</strong>. I study how robots can acquire task-relevant information and use it to
@@ -50,23 +70,7 @@ permalink: /
               I am currently working on projects involving <strong>vision-language-action (VLA) models</strong>, exploring how
               <strong>active perception</strong> can improve <strong>robotic manipulation</strong>.
             </p>
-            <div class="profile-links" aria-label="Profile links">
-              <a href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}">Google Scholar</a>
-              <a href="https://github.com/{{ site.data.socials.github_username }}">GitHub</a>
-              <a href="https://www.linkedin.com/in/{{ site.data.socials.linkedin_username }}/">LinkedIn</a>
-              <a href="https://x.com/{{ site.data.socials.x_username }}">X</a>
-            </div>
           </div>
-          <figure class="portrait">
-            <img
-              src="{{ '/assets/img/profile-polaroid.jpg' | relative_url }}"
-              width="280"
-              height="210"
-              alt="Ziyue Darcy Zheng"
-              fetchpriority="high"
-            />
-            <figcaption>Baltimore, Maryland</figcaption>
-          </figure>
         </section>
 
         <section class="news" id="news" aria-labelledby="news-heading">
