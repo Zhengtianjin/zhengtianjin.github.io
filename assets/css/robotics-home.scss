@@ -66,7 +66,7 @@ summary:focus-visible {
 }
 .intro {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 200px;
+  grid-template-columns: minmax(0, 1fr) 240px;
   gap: 46px;
   align-items: start;
 }
@@ -98,7 +98,7 @@ h1 {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 6 / 7;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
   border-radius: 4px;
 }
